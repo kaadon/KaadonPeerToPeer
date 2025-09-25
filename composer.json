@@ -1,0 +1,48 @@
+{
+  "name": "kaadon/peertopeer",
+  "type": "library",
+  "description": "Kaadon PeerToPeer for PHP",
+  "keywords": [
+    "PeerToPeer",
+    "kaadon"
+  ],
+  "homepage": "https://developer.kaadon.com",
+  "license": "MIT",
+  "require": {
+    "PHP": "^7.2",
+    "kaadon/exceptions": "^0.0.1",
+    "ext-sodium": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.0|^9.0|^10.0",
+    "topthink/think": "5.1"
+  },
+  "authors": [
+    {
+      "name": "kaadon",
+      "email": "kaadon.com@gmail.com",
+      "homepage": "https://developer.kaadon.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Kaadon\\PeerToPeer\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Kaadon\\PeerToPeer\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "extra": {
+    "think": {
+      "config": {
+        "peertopeer": "src/think/config.php"
+      }
+    }
+  }
+}
